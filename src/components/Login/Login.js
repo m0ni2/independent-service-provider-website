@@ -1,10 +1,41 @@
 import React from 'react';
+import { Button, Container, Form } from 'react-bootstrap';
+import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
+    const { user, signInWithGoogle } = useFirebase();
+
+    const handleGoogleSignIn = event => {
+        event.preventDefault();
+        signInWithGoogle();
+        console.log(user);
+    }
+
     return (
-        <div style={{ marginTop: '110px' }}>
-            <h2>This is from Login</h2>
-        </div>
+        <Container style={{ marginTop: '120px' }}>
+            <div className='w-50 mx-auto'>
+                <h2 className='my-4'>Login Form!!!</h2>
+                <Form>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email" required />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Password" required />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Check me out" />
+                    </Form.Group>
+
+                    <Button onClick={handleGoogleSignIn} variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+            </div>
+        </Container>
     );
 };
 
