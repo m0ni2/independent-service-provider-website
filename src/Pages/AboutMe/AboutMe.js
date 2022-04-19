@@ -1,10 +1,23 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import img from '../../images/monir.png'
 
 const AboutMe = () => {
     return (
-        <div >
-            <h2>This is from About Me</h2>
-        </div>
+        <Container>
+            <Row className='d-flex align-items-center'>
+                <Col xs={{ span: 10, offset: 1 }} md={6}>
+                    <div className="about-me-text">
+                        <h2>Hi there, I am Md. Monirul Islam. I am photographer, traveler and I love to capture your unique moments.</h2>
+                    </div>
+                </Col>
+                <Col xs={{ span: 10 }} md={6}>
+                    <div className="about-me-image">
+                        <img className='img-fluid' src={img} alt="" />
+                    </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
