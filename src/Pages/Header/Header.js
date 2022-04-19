@@ -3,15 +3,16 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 import './Header.css';
+import logo from '../../images/logo.png';
 
 const Header = () => {
     const { user, logout } = useFirebase();
 
     return (
-        <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark' className='navbar' fixed='top'>
+        <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark' className='navbar' sticky='top'>
             <Container>
                 <Navbar.Brand>
-                    <Link className='navbar-brand' to='/'><img src='./logo.svg' alt="logo" width='150' /></Link>
+                    <Link className='navbar-brand' to='/'><img src={logo} alt="logo" width='150' /></Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                 <Navbar.Collapse id='responsive-navbar-nav'>

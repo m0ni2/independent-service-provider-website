@@ -8,7 +8,7 @@ const Register = () => {
     const { validated, handleSubmit } = useLoginRegister();
 
     return (
-        <Container style={{ marginTop: '120px' }}>
+        <Container>
             <div className='w-50 mx-auto'>
                 <h2 className='my-4'>Registration Form!!!</h2>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>

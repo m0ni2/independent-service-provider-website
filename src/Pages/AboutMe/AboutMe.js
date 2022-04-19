@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutMe = () => {
     return (
-        <div style={{ marginTop: '110px' }}>
+        <div >
             <h2>This is from About Me</h2>
         </div>
     );

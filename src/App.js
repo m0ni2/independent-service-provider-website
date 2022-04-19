@@ -1,14 +1,14 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import AboutMe from './components/AboutMe/AboutMe';
-import Blogs from './components/Blogs/Blogs';
-import Checkout from './components/Checkout/Checkout';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
-import RequireAuth from './components/RequireAuth/RequireAuth';
+import AboutMe from './Pages/AboutMe/AboutMe';
+import Blogs from './Pages/Blogs/Blogs';
+import Checkout from './Pages/Checkout/Checkout';
+import Header from './Pages/Header/Header';
+import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path='/' element={<Home />}>Home</Route>
         <Route path='/blogs' element={<Blogs />}>Blogs</Route>
         <Route path='/about-me' element={<AboutMe />}>About Me</Route>
+        <Route path='/checkout' element={<Checkout />}>Checkout</Route>
         {/* <Route path='/checkout' element={
           <RequireAuth>
             <Checkout />

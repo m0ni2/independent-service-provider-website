@@ -14,7 +14,7 @@ const Login = () => {
     }
 
     return (
-        <Container style={{ marginTop: '120px' }}>
+        <Container>
             <div className='w-50 mx-auto'>
                 <h2 className='my-4'>Log In Form!!!</h2>
                 <Form noValidate validated={validated} onSubmit={handleGoogleSignIn}>
