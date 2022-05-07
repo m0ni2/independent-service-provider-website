@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
 
-const useData = fileName => {
+const getData = fileName => {
     const [data, setData] = useState([]);
+
     useEffect(() => {
         fetch(fileName + '.json')
             .then(res => res.json())
@@ -13,4 +14,4 @@ const useData = fileName => {
 
 }
 
-export default useData;
+export default getData;
