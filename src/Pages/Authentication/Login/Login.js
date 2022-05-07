@@ -4,6 +4,7 @@ import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 
@@ -33,11 +34,10 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        if (email) {
-            await signInWithEmailAndPassword(email, password)
-            navigate(from, { replace: true });
-            toast.success('Login Successfully!');
 
+        if (email) {
+            await signInWithEmailAndPassword(email, password);
+            navigate(from, { replace: true });
         }
 
     }
@@ -80,8 +80,13 @@ const Login = () => {
                     <Button onClick={handlePasswordReset} className='btn bt-link py-0 text-decoration-none' variant="link">Reset Password</Button>
                 </p>
 
+                <p>{errorMessage}</p>
+                <SocialLogin
+                    navigate={navigate}
+                    location={location}
+                    from={from}
+                ></SocialLogin>
 
-                <SocialLogin></SocialLogin>
             </div>
 
             <ToastContainer

@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const NotFound = () => {
     return (
-        <div>
-            <h1>Page Not Found</h1>
-        </div>
+        <Container className='bg-light d-flex justify-content-center align-items-center' style={{ height: 'calc(100vh - 197px)' }}>
+            <h2 style={{ fontSize: '5rem' }}>Page Not Found</h2>
+        </Container>
     );
 };
 
