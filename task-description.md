@@ -1,18 +1,4 @@
-# Task Description: 
-We are looking for a web developer who can build websites for an Independent Service Provider. You must be familiar with `React`, `firebase`, `react router`, etc. 
 
-Here is the task that you need to do.
-
-
-## Task Detail: 
-1. A website for an individual who provides services. It could be a website for a gym trainer, Tourist/Travel guide, Lawyer, Photographer (wedding photographer, sports photographer, journalism photographer, wild photographer, etc.), Immigration & VISA Consultant, Accountant, Doctor/Dentist (single doctor. not a hospital or a diagnostic center), Tutor, Career Coach, Corporate Sales Trainer, Independent TV Host, Independent Consultant, Model, Actor, Writer, matchmaker, realtor, broker, Journalist, youtuber, home food catering, etc. Please note that you will select one of the options mentioned above. It has to be a person providing services, not an organization or person working in an organization. If you have another idea for an individual service provider, please let us know before proceeding. (Please note that your website can not be related to a marketplace freelancer working on: fiver, upwork, etc. It can not be a portfolio website)
-
-
-2. Make sure your design and website idea is unique. First, finalize your idea (What type of website do you want to build). Then google the site design or visit ThemeForest to get your website idea. However, your website can not be related to your previous assignments or any demo project displayed in the course or in our conceptual sessions.
-----
-3. Give your website a name. The name should appear on the website and be displayed on the website's title.
-4. Home page will have a header (simple navbar), banner, services section, and a footer. The banner could be static or a carousel. Either one will be alright.
-5. Add One extra section on the home page in addition to the 4 sections (header, banner, services, and footer) mentioned above.
 
 ----
 6. The Services section will have at least 3 services. You can put one, two, or more services in a row based on your design. Each service should have a relevant name, price, image, short description, and a specific button. 

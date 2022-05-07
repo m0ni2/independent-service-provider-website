@@ -10,7 +10,7 @@ const Services = () => {
     return (
         <Container className='py-4'>
             <h2 className='text-primary text-center my-4'>Services</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
                     services.map(service => <Service
                         key={service.id}
