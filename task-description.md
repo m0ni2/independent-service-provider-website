@@ -1,10 +1,3 @@
-
-
-----
-6. The Services section will have at least 3 services. You can put one, two, or more services in a row based on your design. Each service should have a relevant name, price, image, short description, and a specific button. 
-
-7. Clicking on the button will take the user to the Checkout route. This route will be private/protected routes. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the checkout page
-
 8. You can put anything on the checkout page. If you want to do some extra optional work, please read the optional but highly recommended section of this description.
 
 9. If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route. 
