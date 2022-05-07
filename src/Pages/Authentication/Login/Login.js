@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Container, FloatingLabel, Form, Button } from 'react-bootstrap';
-import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
@@ -9,7 +9,6 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 
 const Login = () => {
-    const [user, loading, error] = useAuthState(auth);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -17,6 +16,8 @@ const Login = () => {
 
     const emailRef = useRef();
     const passwordRef = useRef();
+
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
@@ -29,17 +30,27 @@ const Login = () => {
         auth
     );
 
-    const handleLogin = async (event) => {
+    const handleLogin = (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-
         if (email) {
-            await signInWithEmailAndPassword(email, password);
-            navigate(from, { replace: true });
-        }
+            signInWithEmailAndPassword(email, password);
 
+        }
+    }
+
+    if (signInError) {
+        errorElement = <div>
+            <p>Error: {signInError?.message}</p>
+        </div>
+    }
+    if (signInLoading) {
+        return <Loading />
+    }
+    if (signInUser) {
+        navigate(from, { replace: true });
     }
 
     const handlePasswordReset = async () => {
@@ -62,7 +73,7 @@ const Login = () => {
             <div className='w-50 mx-auto'>
                 <Form onSubmit={handleLogin}>
                     <FloatingLabel controlId="floatingEmail" label="Email address" className="mb-3">
-                        <Form.Control ref={emailRef} type="email" placeholder="name@example.com" required />
+                        <Form.Control ref={emailRef} type="email" placeholder="name@example.com" required autoComplete='username' />
                     </FloatingLabel>
 
                     <FloatingLabel controlId="floatingPassword" label="Password">
@@ -79,6 +90,8 @@ const Login = () => {
                 <p>Forget Password?
                     <Button onClick={handlePasswordReset} className='btn bt-link py-0 text-decoration-none' variant="link">Reset Password</Button>
                 </p>
+
+                <p className='text-danger'>{errorElement}</p>
 
                 <SocialLogin
                     navigate={navigate}
