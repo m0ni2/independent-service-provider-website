@@ -80,10 +80,8 @@ const Login = () => {
                     <Button onClick={handlePasswordReset} className='btn bt-link py-0 text-decoration-none' variant="link">Reset Password</Button>
                 </p>
 
-                <p>{errorMessage}</p>
                 <SocialLogin
                     navigate={navigate}
-                    location={location}
                     from={from}
                 ></SocialLogin>
 

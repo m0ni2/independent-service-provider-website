@@ -8,7 +8,7 @@ const Services = () => {
     const services = useFetch('servicesData');
 
     return (
-        <Container className='py-4'>
+        <Container className='py-5'>
             <h2 className='text-primary text-center my-4'>Services</h2>
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {

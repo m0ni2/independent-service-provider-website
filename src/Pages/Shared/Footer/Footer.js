@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <footer>
-            <Container fluid className='bg-dark py-4'>
+            <Container fluid className='bg-dark py-5'>
                 <div className='w-50 mx-auto text-center'>
                     <p style={{ color: 'rgba(255,255,255,.55)' }}>	&copy; {thisYear} Perfect Wedding Photography </p>
                 </div>

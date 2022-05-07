@@ -1,0 +1,9 @@
+.b-btm {
+    position: relative;
+}
+
+.b-btm::after {
+    position: absolute;
+    content: '';
+
+}

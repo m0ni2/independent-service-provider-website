@@ -5,7 +5,7 @@ import './SocialLogin.css';
 const SocialLinks = () => {
     return (
 
-        <Container className='py-4 bg-light' fluid>
+        <Container className='py-5 bg-light' fluid>
             <h2 className='text-primary text-center my-4'>Social Links</h2>
             <div className='w-50 mx-auto d-flex justify-content-center align-items-center'>
                 <a className='mx-2' he href="https://www.facebook.com/m0ni2/">

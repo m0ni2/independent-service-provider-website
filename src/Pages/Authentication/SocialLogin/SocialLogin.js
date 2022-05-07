@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
-const SocialLogin = ({ navigate, location, from }) => {
+const SocialLogin = ({ navigate, from }) => {
 
     const [signInWithGoogle, userGoogle, loadingGoogleGoogle, error] = useSignInWithGoogle(auth);
     const [signInWithFacebook, userFacebook, loadingFacebook, errorFacebook] = useSignInWithFacebook(auth);

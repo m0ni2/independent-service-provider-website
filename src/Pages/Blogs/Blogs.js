@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const Blogs = () => {
     return (
-        <Container className='py-4'>
+        <Container className='py-5'>
             <Row>
                 <Col xs={{ span: 10, offset: 1 }} md={{ span: 8, offset: 2 }}>
                     <h5 className='mt-4'><strong>Q-1: </strong>What is the Difference between authorization and authentication?</h5>
