@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-const getData = fileName => {
+const useFetch = fileName => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -14,4 +14,4 @@ const getData = fileName => {
 
 }
 
-export default getData;
+export default useFetch;
