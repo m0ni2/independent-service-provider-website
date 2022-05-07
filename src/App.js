@@ -8,6 +8,8 @@ import Checkout from './Pages/Checkout/Checkout';
 import Login from './Pages/Authentication/Login/Login';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import About from './Pages/About/About';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 
@@ -18,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/blogs' element={<Blogs />} />
+        <Route path='/about' element={<About />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/checkout' element={
@@ -25,7 +28,7 @@ function App() {
             <Checkout />
           </RequireAuth>
         } />
-
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
 
