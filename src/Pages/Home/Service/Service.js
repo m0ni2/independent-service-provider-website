@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 
 const Service = ({ service }) => {
-    const { id, img, heading, body } = service;
+    const { id, img, heading, body, price } = service;
 
     return (
         <div className="col">
@@ -11,6 +11,7 @@ const Service = ({ service }) => {
                 <div className="card-body">
 
                     <h5 className="card-title">{heading}</h5>
+                    <h5 className="card-title">$ {price}</h5>
                     <p className="card-text">{body}</p>
                 </div>
                 <div className="card-footer bg-transparent border-0 w-50 mx-auto mb-3">
