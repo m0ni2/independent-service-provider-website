@@ -5,20 +5,20 @@ import './Banner.css';
 
 const Banner = () => {
 
-    const slides = useFetch('slider');
+    const banners = useFetch('bannerData');
 
     return (
         <Carousel>
             {
-                slides.map(slide => <Carousel.Item>
+                banners.map(banner => <Carousel.Item key={banner.id} >
                     <img
                         className="d-block w-100"
-                        src={slide.img}
-                        alt={slide.heading}
+                        src={banner.img}
+                        alt={banner.heading}
                     />
                     <Carousel.Caption>
-                        <h3>{slide.heading}</h3>
-                        <p>{slide.body}</p>
+                        <h3>{banner.heading}</h3>
+                        <p>{banner.body}</p>
                     </Carousel.Caption>
                 </Carousel.Item>)
             }
