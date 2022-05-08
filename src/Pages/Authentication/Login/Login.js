@@ -70,7 +70,7 @@ const Login = () => {
         <Container className='my-5'>
             <h2 className='text-primary text-center mb-3'>Please Login</h2>
 
-            <div className='w-50 mx-auto'>
+            <div className='col col-md-6 mx-auto'>
                 <Form onSubmit={handleLogin}>
                     <FloatingLabel controlId="floatingEmail" label="Email address" className="mb-3">
                         <Form.Control ref={emailRef} type="email" placeholder="name@example.com" required autoComplete='username' />
@@ -80,7 +80,7 @@ const Login = () => {
                         <Form.Control ref={passwordRef} type="password" placeholder="Password" required autoComplete='current-password' />
                     </FloatingLabel>
 
-                    <Button className='my-4 w-50 mx-auto d-block' variant="info" type="submit">
+                    <Button className='my-4 w-75 mx-auto d-block' variant="info" type="submit">
                         Login
                     </Button>
                 </Form>

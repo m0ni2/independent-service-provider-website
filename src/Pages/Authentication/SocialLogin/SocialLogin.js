@@ -33,15 +33,15 @@ const SocialLogin = ({ navigate, from }) => {
                 <div style={{ height: '2px' }} className='bg-primary w-50' ></div>
             </div>
             <div className="social-login-buttons">
-                <Button onClick={handleGoogleSignIn} className='my-2 w-50 mx-auto d-block' variant="info" type="submit">
+                <Button onClick={handleGoogleSignIn} className='my-2 col w-75 mx-auto d-block' variant="info" type="submit">
                     <img style={{ width: '30px' }} className='me-2' src={google} alt="" />
                     Login with Google
                 </Button>
-                <Button onClick={handleFacebookSignIn} className='my-2 w-50 mx-auto d-block' variant="info" type="submit">
+                <Button onClick={handleFacebookSignIn} className='my-2 w-75 mx-auto d-block' variant="info" type="submit">
                     <img style={{ width: '30px' }} className='me-2' src={facebook} alt="" />
                     Login with Facebook
                 </Button>
-                <Button onClick={handleGithubSignIn} className='my-2 w-50 mx-auto d-block' variant="info" type="submit">
+                <Button onClick={handleGithubSignIn} className='my-2 w-75 mx-auto d-block' variant="info" type="submit">
                     <img style={{ width: '30px' }} className='me-2' src={github} alt="" />
                     Login with Github
                 </Button>

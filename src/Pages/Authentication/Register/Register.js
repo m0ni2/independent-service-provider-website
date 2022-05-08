@@ -39,7 +39,7 @@ const Register = () => {
         <Container className='my-5'>
             <h2 className='text-primary text-center mb-3'>Please Register</h2>
 
-            <div className='w-50 mx-auto'>
+            <div className='col col-md-6 mx-auto'>
                 <Form onSubmit={handleRegister}>
                     <FloatingLabel controlId="floatingName" label="Name" className="mb-3">
                         <Form.Control ref={nameRef} type="text" placeholder="Your Name" required />
@@ -57,7 +57,7 @@ const Register = () => {
                         <Form.Check onClick={() => setAgree(!agree)} type="checkbox" label="Accept terms and conditions" />
                     </Form.Group>
 
-                    <Button disabled={!agree} className='my-4 w-50 mx-auto d-block' variant="info" type="submit">
+                    <Button disabled={!agree} className='my-4 w-75 mx-auto d-block' variant="info" type="submit">
                         Register
                     </Button>
                 </Form>
